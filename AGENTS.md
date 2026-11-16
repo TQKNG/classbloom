@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-ClassBloom is currently in the planning stage, with the product and implementation plan in `PLAN.md`.
+ClassBloom has an implemented client-side demo, with the product and implementation plan in `PLAN.md`.
 
 The planned application is a Next.js App Router project with TypeScript and Tailwind CSS.
 
@@ -14,17 +14,18 @@ Organize the main flows around the home view, lesson planner, and saved plans.
 
 ## Build, Test, and Development Commands
 
-After the Next.js scaffold is created, use the package manager and scripts defined in `package.json`.
+Use the package manager and scripts defined in `package.json`.
+The committed pnpm lockfile installs with `pnpm install --frozen-lockfile`.
 
 Typical commands are:
 
 - `pnpm dev` starts the local development server.
 - `pnpm lint` checks ESLint rules.
 - `pnpm typecheck` runs TypeScript validation when available.
-- `pnpm test` runs the automated test suite.
 - `pnpm build` creates the production build and catches deployment-time errors.
 
-Run linting, type checking, tests, and a production build before submitting changes.
+There is no automated test script yet.
+Run linting, type checking, and a production build before submitting changes.
 
 ## Coding Style & Naming Conventions
 
@@ -48,7 +49,7 @@ Name tests after observable behavior, such as `planner saves and reopens a lesso
 
 ## Commit & Pull Request Guidelines
 
-No Git history is present yet, so no existing commit convention can be inferred.
+No established commit convention is documented for this repository.
 
 Use concise imperative commit subjects, for example `Add lesson plan persistence`.
 
@@ -60,3 +61,40 @@ Keep the demo fully client-side as specified in `PLAN.md`.
 
 Do not add API routes, model calls, secrets, or external network dependencies without updating the architecture and documenting the change.
 
+
+## Shared agent instructions
+
+The following rules are a snapshot of the authoring source at ~/.codex/AGENTS.md.
+# Khanh's agent instructions
+
+These are common instructions for Khanh's Codex agents across all scenarios.
+
+## General guidelines
+
+- Never use the em dash character. Use a plain hyphen instead.
+- When writing commit messages, never add Codex or an agent name as a co-author.
+- Never manually modify `CHANGELOG.md` files or files marked as auto-generated.
+- When writing or substantially editing long Markdown files, put each full sentence on its own line.
+- Preserve normal Markdown structure, but avoid wrapping multiple sentences onto one physical line.
+- When making technical decisions, do not give excessive weight to development cost.
+- Prefer quality, simplicity, robustness, scalability, and long-term maintainability.
+- When fixing bugs, first reproduce the problem in an end-to-end environment that closely matches the user's real workflow.
+- Confirm that the fix addresses the root problem and not only its visible symptom.
+- During end-to-end testing, inspect the UI carefully and maintain a high standard for visual detail.
+- If something clearly looks wrong, fix it when it is safely within the task's scope, even when it is not the direct focus of the request.
+- Apply the same standard to engineering quality, including lint errors, test failures, and flaky tests.
+- If you notice an issue that is outside the current scope or unsafe to change, report it clearly instead of ignoring it.
+- If any user request is vague or lacks necessary context, ask brief, targeted clarifying questions before providing a full solution.
+- If user request is related to herdr-app, you must read ~/.config/herdr-app/AGENTS.md and ~/.agents/skills/herdr/SKILL.md
+
+## Khanh's opinions
+
+When work would benefit from Khanh's viewpoints, read `~/OPINIONS.md` before making relevant decisions.
+
+If that file is unavailable, continue with the available project context and state any material assumptions.
+
+## Voice profile
+
+When writing or posting on behalf of Khanh, read `~/VOICE.md` first to understand how Khanh communicates.
+
+If that file is unavailable, use a professional, direct, concise, and natural voice.
